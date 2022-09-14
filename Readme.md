@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Андрей Ентин](https://up.htmlacademy.ru/univer-js1/1/user/2222117).
-* Наставник: 'Нюкало Павел Юрьевич'(https://htmlacademy.ru/profile/nyukalopavel).
+* Наставник: [Нюкало Павел Юрьевич](https://htmlacademy.ru/profile/nyukalopavel).
 
 ---
 

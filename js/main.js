@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const getRandomPositiveInteger = (a, b) => {
   const lower = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
   const upper = Math.floor(Math.max(Math.abs(a), Math.abs(b)));
@@ -44,11 +43,9 @@ let descriptionId = getRandomPositiveInteger(1, 25); // не должен пов
 let commentsId = 0; // не должен повторятся
 let leavedLikes = getRandomPositiveInteger(15, 200);
 
-
 function checkStringLength (string, length) {
   return string.length <= length;
 }
-
 
 const randomArrayElement = (elements) => elements[getRandomPositiveInteger(0, elements.length - 1)];
 

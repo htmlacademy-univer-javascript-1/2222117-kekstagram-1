@@ -1,5 +1,4 @@
-import {getRandomPositiveInteger} from './util';
-import {getRandomArrayElement} from './util';
+import { getRandomPositiveInteger, getRandomArrayElement, getDescriptionId, getCommentId } from './util';
 
 const NAMES = [
   'Родион',
@@ -22,7 +21,6 @@ const MESSAGES = [
   'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!',
 ];
 const DESCRIPTION = [
-
   'Выдающаяся фотография – это глубина чувств, а не глубина резкости',
   'Вы не фотографируете, вы создаете',
   'Нет никаких правил для хороших фотографий, есть только хорошие фотографии',
@@ -33,24 +31,23 @@ const DESCRIPTION = [
   'Меня не интересует фотография сама по себе. Я лишь хочу захватить минутную часть реальности',
   'Мир просто не укладывается в формат 35-мм камеры',
   'Фотографии – это открытые двери в прошлое, но они позволяют заглянуть в будущее',
-
 ];
-let descriptionId = getRandomPositiveInteger(1, 25); // не должен повторятся
-let commentsId = getRandomPositiveInteger(20, 300); // не должен повторятся
 const PUTTED_LIKES = getRandomPositiveInteger(15, 200);
 const AMOUNT_OF_PHOTOS = 25;
 const AMOUNT_OF_COMMENTS = 5;
+const DESCRIPTION_ID = 25;
+const COMMENT_ID = 25;
 
 const createComment = () => ({
-  id: commentsId++,
+  id: getCommentId(COMMENT_ID),
   avatar: `img/avatar${getRandomPositiveInteger(1, 6)}.svg`,
   message: getRandomArrayElement(MESSAGES),
   name: getRandomArrayElement(NAMES)
 });
 
 const createDescription = () => ({
-  id: descriptionId++,
-  url: `photos${descriptionId++}.jpg`,
+  id: getDescriptionId(DESCRIPTION_ID),
+  url: `photos${getDescriptionId()}.jpg`,
   description: getRandomArrayElement(DESCRIPTION),
   likes: PUTTED_LIKES,
   comment: Array.from({length: AMOUNT_OF_COMMENTS}, createComment),

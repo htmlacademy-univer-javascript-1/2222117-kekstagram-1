@@ -7,5 +7,26 @@ const getRandomPositiveInteger = (a, b) => {
 
 const getRandomArrayElement = (elements) => elements[getRandomPositiveInteger(0, elements.length - 1)];
 
-export {getRandomPositiveInteger};
-export {getRandomArrayElement};
+const checkStringLength = (checkingString, maxLength) => checkingString.length <= maxLength;
+
+const getCommentId = (commentId) => {
+  if (commentId === 0) {
+    return 0;
+  }
+  return commentId - 1;
+};
+
+const getDescriptionId = (discriptionId) => {
+  if (discriptionId === 0) {
+    return 0;
+  }
+  return discriptionId - 1;
+};
+
+export {
+  getRandomPositiveInteger,
+  getRandomArrayElement,
+  checkStringLength,
+  getDescriptionId,
+  getCommentId
+};

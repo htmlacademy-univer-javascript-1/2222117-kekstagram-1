@@ -23,10 +23,13 @@ const getDescriptionId = (discriptionId) => {
   return discriptionId - 1;
 };
 
+const isEscapeKey = (event) => event.key === 'Escape';
+
 export {
   getRandomPositiveInteger,
   getRandomArrayElement,
   checkStringLength,
   getDescriptionId,
-  getCommentId
+  getCommentId,
+  isEscapeKey,
 };

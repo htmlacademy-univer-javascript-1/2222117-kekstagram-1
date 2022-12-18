@@ -1,5 +1,4 @@
-import {createPhotosDescription} from './photoDescription';
-import { renderThumbnails } from './thumbnails';
+import { createPhotosDescription } from './photoDescription.js';
+import { renderThumbnails } from './thumbnails.js';
 
-createPhotosDescription();
-renderThumbnails();
+renderThumbnails(createPhotosDescription());

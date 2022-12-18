@@ -1,4 +1,4 @@
-import { getRandomPositiveInteger, getRandomArrayElement, getDescriptionId, getCommentId } from './util';
+import { getRandomPositiveInteger, getRandomArrayElement, getDescriptionId, getCommentId } from './util.js';
 
 const NAMES = [
   'Родион',

@@ -1,5 +1,7 @@
-import {createPhotosDescription} from './photoDescription';
-import { renderThumbnails } from './thumbnails';
+import {setUserFormSubmit} from './form.js';
+import {sendRequest} from './api.js';
+import {onSuccess, onFail} from './utils.js';
+import {showError, showSuccess} from './alerts.js';
 
-createPhotosDescription();
-renderThumbnails();
+sendRequest(onSuccess, onFail, 'GET');
+setUserFormSubmit(showSuccess, showError);
